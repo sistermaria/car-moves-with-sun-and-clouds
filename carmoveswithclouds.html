@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" /<style>
+
+    <style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+</style>
+
+  </head>
+  <body>
+    <script >
+     function setup() {
+  createCanvas(400, 400);
+  x=20;
+  x1=10;
+  x2=0;
+  cloudx=100;
+  cloudy=100;
+}
+
+function draw() {
+
+  
+  background(30,20,242);
+  fill(0,0,255);
+  rect(x+10,250,50,30);//blue rect
+  
+  makeCloud(cloudx,cloudy-50);
+  makeCloud(cloudx+70,cloudy+70);
+  cloudx+=0.2;
+  
+  
+  
+  stroke(255,0,0);
+  fill(255,0,0);
+  rect(x+20,232,33,18);//red rect
+  
+  fill(0,0,0);
+  ellipse(x+20,285,15,15);//back wheel
+  
+  fill(0,0,0);
+  ellipse(x+45,285,15,15);//front wheel
+  
+  fill(200,200,0);
+  ellipse(x1+30,24,50);//sun
+  
+  x+=0.6;
+  x1+=0.1;
+  
+  fill(0,0,0);
+  rect(x2,290,400);
+  
+  
+}
+function makeCloud(cloudx,cloudy){
+  noStroke();
+  fill(200,200,200);
+  ellipse(cloudx,cloudy,70,50);
+  ellipse(cloudx+10,cloudy+10,70,50);
+  ellipse(cloudx-20,cloudy+10,70,50);
+}
+  
+  
+  
+
+    </script>
+  </body>
+</html>
